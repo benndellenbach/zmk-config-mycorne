@@ -6,9 +6,7 @@
 */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 / {
     chosen {
@@ -49,10 +47,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp F1        &kp F2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0         &kp BSPC
-&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp LBKT       &kp RBKT
-&kp LSHFT  &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &kp BACKSLASH  &trans
-                                       &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&kp TAB    &kp F1  &kp F2  &kp N3    &kp N4  &kp N5       &kp N6    &kp N7    &kp N8    &kp N9     &kp N0         &kp ENTER
+&trans     &trans  &trans  &trans    &trans  &trans       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp LBKT       &kp RBKT
+&kp LSHFT  &trans  &trans  &trans    &trans  &trans       &trans    &trans    &trans    &trans     &kp BACKSLASH  &trans
+                           &kp LGUI  &trans  &kp SPACE    &kp RET   &trans    &kp RALT
             >;
         };
 
@@ -68,7 +66,7 @@
             bindings = <
 &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp N7    &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp ENTER
 &kp CLCK   &none         &none         &none         &none         &none           &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT     &kp MINUS      &kp EQUAL
-&kp LSHFT  &out OUT_USB  &out OUT_BLE  &none         &none         &none           &trans        &trans    &trans        &trans        &kp BACKSLASH  &kp TILDE
+&kp LSHFT  &trans        &trans        &none         &none         &none           &trans        &trans    &trans        &trans        &kp BACKSLASH  &kp TILDE
                                        &kp LGUI      &trans        &kp SPACE       &kp RET       &trans    &kp RALT
             >;
         };
