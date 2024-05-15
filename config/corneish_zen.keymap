@@ -47,6 +47,13 @@
             #binding-cells = <0>;
             bindings = <&mo 1>, <&to 3>;
         };
+
+        t_to_d: t_to_d {
+            compatible = "zmk,behavior-tap-dance";
+            label = "T_TO_D";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&to 0>;
+        };
     };
 
     keymap {
@@ -105,10 +112,10 @@
 
         system_layer {
             bindings = <
-&trans      &trans        &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &kp NUMBER_1  &kp NUMBER_2  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans      &trans        &trans        &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &kp NUMBER_1  &kp NUMBER_2  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans  &trans  &t_to_d    &trans  &trans  &trans
             >;
 
             label = "SYSTEM";
