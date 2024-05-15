@@ -89,7 +89,7 @@
 &kp TILDE  &kp NUMBER_1  &kp NUMBER_2  &kp N3  &kp N4  &kp N5    &kp N6    &kp N7    &kp N8  &kp N9     &kp N0         &kp ENTER
 &trans     &trans        &trans        &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp LBKT       &kp RBKT
 &trans     &trans        &trans        &trans  &trans  &trans    &trans    &trans    &trans  &trans     &kp BACKSLASH  &trans
-                                       &mo 4   &trans  &trans    &trans    &trans    &trans
+                                       &mo 3   &trans  &trans    &trans    &trans    &trans
             >;
         };
 
@@ -104,21 +104,10 @@
 
             bindings = <
 &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp N7    &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp ENTER
-&trans     &none         &none         &none         &none         &none           &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT     &kp MINUS      &kp EQUAL
-&trans     &trans        &trans        &none         &none         &none           &trans        &trans    &trans        &trans        &kp BACKSLASH  &trans
-                                       &mo 3         &trans        &trans          &trans        &trans    &kp RALT
+&trans     &trans        &trans        &trans        &trans        &trans          &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT     &kp MINUS      &kp EQUAL
+&trans     &trans        &trans        &trans        &trans        &trans          &trans        &trans    &trans        &trans        &kp BACKSLASH  &trans
+                                       &mo 4         &trans        &trans          &trans        &trans    &kp RALT
             >;
-        };
-
-        function_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "funtion";
         };
 
         system_layer {
@@ -130,6 +119,17 @@
             >;
 
             label = "system";
+        };
+
+        function_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "funtion";
         };
     };
 };
