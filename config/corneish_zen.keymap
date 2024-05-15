@@ -45,7 +45,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QICK_NUMBER";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&tog 3>;
+            bindings = <&mo 1>, <&to 3>;
         };
     };
 
