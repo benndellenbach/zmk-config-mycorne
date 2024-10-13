@@ -30,7 +30,7 @@ jobs:
           west build -b nombre_de_tu_placa -s app -d build/nombre_de_tu_placa -- -DZMK_CONFIG="${{ github.workspace }}/config"
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3  # Actualizado a la versión v3
         with:
           name: firmware
-          path: build/nicenanozephyr/zephyr.uf2  # o .bin según tu placa
+          path: build/nicenano/zephyr/zephyr.uf2  # o .bin según tu placa
