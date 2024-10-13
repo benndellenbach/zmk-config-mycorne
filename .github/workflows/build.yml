@@ -2,4 +2,35 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'  # Cambia a la versión de Python que necesites
+
+      - name: Create virtual environment
+        run: |
+          python -m venv venv
+          echo "Activating virtual environment..."
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install remarshal  # Instala el paquete necesario en el entorno virtual
+
+      - name: Build Firmware
+        run: |
+          echo "Activating virtual environment..."
+          source venv/bin/activate
+          # Reemplaza con el script de compilación o flujo de trabajo adecuado
+          west init -l app/
+          west update
+          west build -b nombre_de_tu_placa -s app -d build/nombre_de_tu_placa -- -DZMK_CONFIG="${{ github.workspace }}/config"
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: firmware
+          path: build/nombre_de_tu_placa/zephyr/zephyr.uf2  # o .bin según tu placa
