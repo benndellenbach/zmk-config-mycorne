@@ -33,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: build/nombre_de_tu_placa/zephyr/zephyr.uf2  # o .bin según tu placa
+          path: build/nicenanozephyr/zephyr.uf2  # o .bin según tu placa
