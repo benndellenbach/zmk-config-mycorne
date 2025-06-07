@@ -31,8 +31,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-
-
         default_layer {
             display-name = "QWERTY";
 
@@ -91,6 +89,33 @@
 &trans  &bt BT_CLR  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans  &kp PRINTSCREEN  &kp F12
 &trans  &trans      &trans  &trans  &trans      &trans         &trans       &trans  &trans  &trans  &kp SCROLLLOCK   &kp PAUSE_BREAK
                             &trans  &trans      &trans         &trans       &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &kp F12  &kp F9  &kp F8  &kp F7  &trans    &trans  &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans  &kp F11  &kp F6  &kp F5  &kp F4  &trans    &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&td0    &kp F10  &kp F3  &kp F2  &kp F1  &trans    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                         &trans  &trans  &trans    &trans  &trans        &kp N0
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
