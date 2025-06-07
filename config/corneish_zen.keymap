@@ -84,19 +84,19 @@
 
         NUMPAD {
             bindings = <
-&trans                             &rgb_ug RGB_SPI                    &rgb_ug RGB_HUI                 &rgb_ug RGB_SAI                  &rgb_ug RGB_BRI                    &rgb_ug RGB_EFF    &kp PERCENT    &kp N7        &kp N8        &kp N9        &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans                             &rgb_ug RGB_SPD                    &rgb_ug RGB_HUD                 &rgb_ug RGB_SAD                  &rgb_ug RGB_BRD                    &rgb_ug RGB_EFR    &kp EQUAL      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL         &kp GRAVE
-&rgb_ug RGB_COLOR_HSB(233,100,50)  &rgb_ug RGB_COLOR_HSB(184,100,49)  &rgb_ug RGB_COLOR_HSB(0,0,100)  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(278,100,50)  &rgb_ug RGB_TOG    &kp MINUS      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH     &trans
-                                                                                                      &trans                           &trans                             &trans             &kp BACKSPACE  &kp N0        &kp DELETE
+&trans                             &rgb_ug RGB_SPI                    &rgb_ug RGB_HUI                 &rgb_ug RGB_SAI                  &rgb_ug RGB_BRI                    &rgb_ug RGB_EFF    &kp PERCENT  &kp N7        &kp N8        &kp N9        &kp BACKSLASH     &kp BACKSPACE
+&trans                             &rgb_ug RGB_SPD                    &rgb_ug RGB_HUD                 &rgb_ug RGB_SAD                  &rgb_ug RGB_BRD                    &rgb_ug RGB_EFR    &kp EQUAL    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL         &kp GRAVE
+&rgb_ug RGB_COLOR_HSB(233,100,50)  &rgb_ug RGB_COLOR_HSB(184,100,49)  &rgb_ug RGB_COLOR_HSB(0,0,100)  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(278,100,50)  &rgb_ug RGB_TOG    &kp MINUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                                                                                                      &trans                           &trans                             &trans             &kp INS      &kp N0        &kp DELETE
             >;
         };
 
         FNBT {
             bindings = <
-&bootloader  &kp F12  &kp F9  &kp F8  &kp F7  &kp PRINTSCREEN    &kp PG_UP  &kp N7        &kp N8        &kp N9        &sys_reset    &bootloader
+&bootloader  &kp F12  &kp F9  &kp F8  &kp F7  &kp PRINTSCREEN    &kp PG_UP  &out OUT_TOG  &kp N8        &kp N9        &sys_reset    &bootloader
 &trans       &kp F11  &kp F6  &kp F5  &kp F4  &kp SCROLLLOCK     &kp PG_DN  &bt BT_SEL 3  &bt BT_SEL 4  &kp NUMBER_6  &trans        &trans
 &trans       &kp F10  &kp F3  &kp F2  &kp F1  &kp PAUSE_BREAK    &kp HOME   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &out OUT_TOG  &trans
-                              &trans  &trans  &trans             &trans     &kp N0        &out OUT_TOG
+                              &trans  &trans  &trans             &trans     &trans        &trans
             >;
         };
 
