@@ -41,72 +41,44 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T          &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G          &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&td0       &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &lt 3 SPACE    &lt 0 ENTER  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F        &kp G          &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&td0       &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &lt 1 SPACE  &lt 3 SPACE    &lt 0 ENTER  &mo 2  &kp RALT
             >;
         };
 
-        lower_layer {
-            display-name = "NUMBER";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans             &kp INS          &kp DEL          &trans
-            >;
-        };
-
-        raise_layer {
-            display-name = "SYMBOL";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &none         &none         &none     &none     &none        &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans    &trans    &kp SPACE    &kp RET    &trans     &trans
-            >;
-        };
-
-        NUMPAD {
+        Layer1 {
             bindings = <
 &trans                             &rgb_ug RGB_SPI                    &rgb_ug RGB_HUI                 &rgb_ug RGB_SAI                  &rgb_ug RGB_BRI                    &rgb_ug RGB_EFF    &kp PERCENT  &kp N7        &kp N8        &kp N9        &kp BACKSLASH     &kp BACKSPACE
 &trans                             &rgb_ug RGB_SPD                    &rgb_ug RGB_HUD                 &rgb_ug RGB_SAD                  &rgb_ug RGB_BRD                    &rgb_ug RGB_EFR    &kp EQUAL    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL         &kp GRAVE
 &rgb_ug RGB_COLOR_HSB(233,100,50)  &rgb_ug RGB_COLOR_HSB(184,100,49)  &rgb_ug RGB_COLOR_HSB(0,0,100)  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(278,100,50)  &rgb_ug RGB_TOG    &kp MINUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
                                                                                                       &trans                           &trans                             &trans             &kp INS      &kp N0        &kp DELETE
             >;
+
+            label = "NUMPAD";
         };
 
-        FNBT {
+        Layer2 {
             bindings = <
 &bootloader  &kp F12  &kp F9  &kp F8  &kp F7  &kp PRINTSCREEN    &kp PG_UP  &out OUT_TOG  &kp N8        &kp N9        &sys_reset    &bootloader
 &trans       &kp F11  &kp F6  &kp F5  &kp F4  &kp SCROLLLOCK     &kp PG_DN  &bt BT_SEL 3  &bt BT_SEL 4  &kp NUMBER_6  &trans        &trans
 &trans       &kp F10  &kp F3  &kp F2  &kp F1  &kp PAUSE_BREAK    &kp HOME   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &out OUT_TOG  &trans
                               &trans  &trans  &trans             &trans     &trans        &trans
             >;
+
+            label = "Fn/BT";
         };
 
-        SYM {
+        Layer3 {
             bindings = <
 &trans  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF    &trans  &kp N7        &kp N8        &kp N9        &trans  &trans
 &trans  &rgb_ug RGB_SPD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR    &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
 &trans  &trans           &kp F3           &kp F2           &kp F1           &rgb_ug RGB_TOG    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
                                           &trans           &trans           &trans             &trans  &kp N0        &trans
             >;
+
+            label = "SymPad";
         };
     };
 };
